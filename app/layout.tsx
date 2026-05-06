@@ -19,9 +19,9 @@ const parkinsans = Parkinsans({
 });
 
 export const metadata: Metadata = {
-  title: "Codeguide Starter Fullstack",
+  title: "Cafe Dev",
   description:
-    "A modern Next.js starter with TypeScript, TailwindCSS, shadcn/ui, Better Auth, and Drizzle ORM",
+    "Cafe management dashboard and POS starter built with Next.js, TypeScript, and PostgreSQL",
 };
 
 export default function RootLayout({

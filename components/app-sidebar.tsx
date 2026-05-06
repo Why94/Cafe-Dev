@@ -5,14 +5,10 @@ import Link from "next/link"
 import Image from "next/image"
 import { useSession } from "@/lib/auth-client"
 import {
-  IconCamera,
   IconChartBar,
   IconDashboard,
   IconDatabase,
-  IconFileAi,
   IconFileDescription,
-  IconFileWord,
-  IconFolder,
   IconHelp,
   IconListDetails,
   IconReport,
@@ -39,76 +35,28 @@ const staticData = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/dashboard",
       icon: IconDashboard,
     },
     {
-      title: "Lifecycle",
-      url: "#",
+      title: "POS Kasir",
+      url: "/dashboard/pos",
       icon: IconListDetails,
     },
     {
-      title: "Analytics",
+      title: "Orders",
+      url: "#",
+      icon: IconFileDescription,
+    },
+    {
+      title: "Reports",
       url: "#",
       icon: IconChartBar,
     },
     {
-      title: "Projects",
-      url: "#",
-      icon: IconFolder,
-    },
-    {
-      title: "Team",
+      title: "Staff",
       url: "#",
       icon: IconUsers,
-    },
-  ],
-  navClouds: [
-    {
-      title: "Capture",
-      icon: IconCamera,
-      isActive: true,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Proposal",
-      icon: IconFileDescription,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Prompts",
-      icon: IconFileAi,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
     },
   ],
   navSecondary: [
@@ -130,19 +78,19 @@ const staticData = {
   ],
   documents: [
     {
-      name: "Data Library",
+      name: "Menu Library",
       url: "#",
       icon: IconDatabase,
     },
     {
-      name: "Reports",
+      name: "Inventory",
       url: "#",
       icon: IconReport,
     },
     {
-      name: "Word Assistant",
+      name: "Daily Close",
       url: "#",
-      icon: IconFileWord,
+      icon: IconFileDescription,
     },
   ],
 }
@@ -170,8 +118,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
               <Link href="/">
-                <Image src="/codeguide-logo.png" alt="CodeGuide" width={32} height={32} className="rounded-lg" />
-                <span className="text-base font-semibold font-parkinsans">CodeGuide</span>
+                <Image src="/codeguide-logo.png" alt="Cafe Dev" width={32} height={32} className="rounded-lg" />
+                <span className="text-base font-semibold font-parkinsans">Cafe Dev</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
